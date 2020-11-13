@@ -57,7 +57,7 @@ namespace SendMailApp
             }
         }
         private void MsgBox()
-        {
+        { 
             System.Windows.Forms.MessageBox.Show("正しい値を入力してください。",
             "エラー",
             MessageBoxButtons.OK,
