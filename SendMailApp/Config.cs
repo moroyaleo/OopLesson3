@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -14,6 +15,11 @@ namespace SendMailApp
     {
         //単一のインスタンス
         private static Config instance;
+        public string Smtp { get; set; }    //SMTPサーバー
+        public string MailAddress { get; set; } //自メールアドレス（送信元）
+        public string PassWord { get; set; }    //パスワード
+        public int Port { get; set; }   //ポート番号
+        public bool Ssl { get; set; }   //SSL設定
 
         //インスタンスの取得
         public static Config GetInstance()
@@ -26,11 +32,7 @@ namespace SendMailApp
         }
 
 
-        public string Smtp { get; set; }    //SMTPサーバー
-        public string MailAddress { get; set; } //自メールアドレス（送信元）
-        public string PassWord { get; set; }    //パスワード
-        public int Port { get; set; }   //ポート番号
-        public bool Ssl { get; set; }   //SSL設定
+       
 
 
         //コンストラクタ(外部からnewできないようにする)
